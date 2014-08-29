@@ -1,5 +1,3 @@
-# Практическое задание в рамках мастер-класса «Верстка больших проектов»
+# css3buttongenerator
 
-Форкните проект в репозитории, исправьте верстку по всем лучшим практикам перечисленным в [мастер-классе](http://www.smartme.com.ua/workshops/verstka-bolshih-proektov-perehodim-na-sleduyushchiy-uroven).
-
-После выполнения задания оставьте свой Pull Request в этот репозиторий для получения детального ревью.
+Simple css3buttongenerator which let one specifies different css properties and get html and css code for a button. Also it sends the html and css code to user via email.
