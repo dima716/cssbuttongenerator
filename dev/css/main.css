@@ -1307,9 +1307,9 @@ hr {
   transform: translate3d(0, 0, 0);
 }
 body {
-  font-family: 'Quicksand';
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
+  font-family: 'Quicksand';
 }
 .row {
   margin-bottom: 20px;
@@ -1323,17 +1323,17 @@ h3 {
   text-shadow: 1px 1px 2px #000;
 }
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 input,
 textarea,
 button {
   color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  outline: none;
   border: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px #000;
 }
 input,
@@ -1358,9 +1358,10 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 .options__item {
+  position: relative;
+  margin: 25px 0;
   *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
   zoom: 1 !ie;
-  margin: 15px 0;
 }
 .options__item:before,
 .options__item:after {
@@ -1376,11 +1377,26 @@ textarea:-ms-input-placeholder {
 }
 .options__item__name {
   display: inline-block;
-  vertical-align: middle;
-  text-align: right;
   min-width: 125px;
-  text-transform: none;
   margin-right: 15px;
+  text-align: right;
+  vertical-align: middle;
+  text-transform: none;
+}
+.options__item__value {
+  position: absolute;
+  top: -6px;
+  right: 52px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  vertical-align: bottom;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 #000;
+  text-shadow: 1px 1px 2px #000;
+  line-height: 35px;
 }
 @media (max-width: 992px) {
   .options {
@@ -1435,12 +1451,12 @@ textarea:-ms-input-placeholder {
   height: 19px;
 }
 .scrollbox.disk .ui-slider-handle {
-  outline: none;
   top: -2px;
   right: -9px;
   width: 18px;
   height: 18px;
   margin-left: -9px;
+  outline: none;
   background: url("../img/scrollbox/sliders.png") 0 0 no-repeat;
 }
 .scrollbox.fat .hitbox {
@@ -1554,10 +1570,10 @@ textarea:-ms-input-placeholder {
   }
 }
 .submit {
+  transition: all .25s ease;
   border: 2px solid #fff;
   border-radius: 5px;
   box-shadow: 1px 1px 5px 0 #000;
-  transition: all .25s ease;
 }
 .submit:active {
   box-shadow: -1px -1px 5px 0 #000000;

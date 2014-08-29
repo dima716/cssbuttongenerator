@@ -1,22 +1,43 @@
 .options {
-    // border-right: 4px solid #80A62D;
-
     &__item {
-        .clearfix();
-        margin: 15px 0;
-        // text-align: left;
+        position: relative;
 
+        margin: 25px 0;
+
+        .clearfix();
         &__element {
             display: inline-block;
+
             width: 210px;
         }
         &__name {
             display: inline-block;
-            vertical-align: middle;
-            text-align: right;
+
             min-width: 125px;
-            text-transform: none;
             margin-right: 15px;
+
+            text-align: right;
+            vertical-align: middle;
+            text-transform: none;
+        }
+        &__value {
+            position: absolute;
+            top: -6px;
+            right: 52px;
+
+            width: 35px;
+            height: 35px;
+
+            text-align: center;
+            vertical-align: bottom;
+
+            color: #fff;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.3);
+            box-shadow: 0 0 10px 0 #000;
+            text-shadow: 1px 1px 2px #000;
+
+            line-height: 35px;
         }
     }
 }
@@ -24,10 +45,8 @@
 @media (max-width: 992px) {
     .options {
         margin-bottom: 25px;
-
         &__item {
             text-align: center;
-
             &__element {
                 text-align: left;
             }
