@@ -55,14 +55,14 @@ grunt.initConfig({
 
     concat: {  //описываем работу плагина конкатенации
         dist: {
-            src: ['dev/js/main.js','dev/js/SCF.ui.js','dev/js/scrollbox.js'],  // какие файлы конкатенировать
-            dest: 'dev/js/main_concat.js'  // куда класть файл, который получится после процесса конкатенации 
+            src: ['dev/js/SCF.ui.js','dev/js/scrollbox.js','dev/js/main.js'],  // какие файлы конкатенировать
+            dest: 'dev/js/main.min.js'  // куда класть файл, который получится после процесса конкатенации 
         }
     },
 
     uglify: {  //описываем работу плагина минификации js - uglify.
         build: {
-            src: 'dev/js/main_concat.js',  // какой файл минифицировать
+            src: 'dev/js/main.min.js',  // какой файл минифицировать
             dest: 'build/js/main.min.js' // куда класть файл, который получиться после процесса минификации
         }
     },
@@ -80,7 +80,7 @@ grunt.initConfig({
         },
         scripts: {
             files: ['dev/js/*.js'],  //следить за всеми js файлами в папке dev
-            tasks: ['jshint','concat','uglify', 'removelogging']  //при их изменении запускать следующие задачи
+            tasks: ['jshint','concat','uglify']  //при их изменении запускать следующие задачи
         },
     },
 

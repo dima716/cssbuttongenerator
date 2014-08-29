@@ -12,6 +12,8 @@ self.init = function() {
 
 self.bindEvents = function() {
     $(self.element).each(function() {
+        var currentSelfElement = $(this);
+        
         // Get a default value for all bars
         var scaleInitialWidth = $(this).find(self.scale).width();
         var scrollboxWidth = $(this).find(self.hitbox).width();
@@ -24,6 +26,9 @@ self.bindEvents = function() {
                 $(this).next(self.scale).css({
                     'width': scaleWidth
                 });
+
+                // self.next().html(ui.value);
+                currentSelfElement.parent().next().html(ui.value);
             },
             max: scrollboxWidth,
             value: scaleInitialWidth
