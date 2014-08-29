@@ -1,0 +1,36 @@
+.options {
+    // border-right: 4px solid #80A62D;
+
+    &__item {
+        .clearfix();
+        margin: 15px 0;
+        // text-align: left;
+
+        &__element {
+            display: inline-block;
+            width: 210px;
+        }
+        &__name {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: right;
+            min-width: 125px;
+            text-transform: none;
+            margin-right: 15px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .options {
+        margin-bottom: 25px;
+
+        &__item {
+            text-align: center;
+
+            &__element {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie7 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie8 lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9 lt-ie10"> <![endif]-->
+<!--[if gte IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Type your title here</title>
+  <meta name="description" content="Type your description here">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<body>
+<!--[if lte IE 7]>
+<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите ваш браузер</a> для улучшения отображения страницы.</p>
+<![endif]-->
+
+<div class="wrapper">
+  <div class="container">
+    <h1 class="title">css3 button generator</h2>
+    <div class="row">
+      <div class="col-md-6 options">
+        <h2 class="options__title">options</h2>
+        <!-- options element  -->
+        <div class="options__item">
+          <h3 class="options__item__name">Border-radius</h3>
+          <div class="options__item__element">
+              <div class="scrollbox js-scrollbox disk">
+                <div class="hitbox"></div>
+                <div class="scale" style="width: 50%"></div>
+              </div>
+          </div>              
+        </div> <!-- /options element -->
+        <div class="options__item">
+          <h3 class="options__item__name">Border-size</h3>
+          <div class="options__item__element">
+              <div class="scrollbox js-scrollbox disk">
+                <div class="hitbox"></div>
+                <div class="scale" style="width: 50%"></div>
+              </div> 
+          </div>              
+        </div>
+        <div class="options__item">
+          <h3 class="options__item__name">Text</h3>
+          <div class="options__item__element">
+            <input type="text" name="button-text" placeholder="Button text">             
+           </div>
+        </div>
+      </div>
+      <div class="col-md-6 result">
+        <h2>result</h2>
+        <div class="result__button"></div>
+      </div>
+    </div>
+    <form class="code" action="#">
+      <div class="row">
+        <div class="col-md-12">
+          <textarea class="code__html" name="html-code" id="" cols="30" rows="10" placeholder="HTML code"></textarea>
+          <textarea class="code__css" name="css-code" id="" cols="30" rows="10" placeholder="CSS code"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input class="email" type="text" name="email" placeholder="mail">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <button class="submit" type="submit" name="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div> <!-- /container -->
+</div> <!-- /wrapper -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>

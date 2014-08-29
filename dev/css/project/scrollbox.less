@@ -1,0 +1,151 @@
+.scrollbox {
+  position: relative;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 7px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  border-radius: 10px;
+  background-color: #1e1f22;
+  -webkit-box-shadow: inset 0 1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.1);
+  -moz-box-shadow: inset 0 1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 black, 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  behavior: url("javascripts/vendor/PIE.htc"); }
+  .scrollbox.dot .hitbox {
+    top: -2px; 
+
+    height: 11px;}
+  .scrollbox.dot .ui-slider-handle {
+    top: 1px;
+    right: -3px;
+
+    width: 7px;
+    height: 7px;
+    margin-left: -3px;
+
+    background: #9f9f9f;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #9f9f9f));
+    background-image: -webkit-linear-gradient(top, #f7f7f7, #9f9f9f);
+    background-image: -moz-linear-gradient(top, #f7f7f7, #9f9f9f);
+    background-image: -ms-linear-gradient(top, #f7f7f7, #9f9f9f);
+    background-image: -o-linear-gradient(top, #f7f7f7, #9f9f9f);
+    background-image: linear-gradient(top, #f7f7f7, #9f9f9f);
+
+    -pie-background: linear-gradient(#f7f7f7, #9f9f9f);
+    behavior: url("javascripts/vendor/PIE.htc"); }
+  .scrollbox.disk .hitbox {
+    top: -6px; 
+
+    height: 19px;}
+  .scrollbox.disk .ui-slider-handle {
+    outline: none;
+    top: -2px;
+    right: -9px;
+
+    width: 18px; 
+    height: 18px;
+    margin-left: -9px;
+
+    background: url("../img/scrollbox/sliders.png") 0 0 no-repeat;}
+  .scrollbox.fat .hitbox {
+    top: -6px; 
+
+    height: 19px;}
+  .scrollbox.fat .scale {
+    height: 7px;
+
+    border: none;
+    background: #71951f;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afd067), color-stop(100%, #71951f));
+    background-image: -webkit-linear-gradient(top, #afd067, #71951f);
+    background-image: -moz-linear-gradient(top, #afd067, #71951f);
+    background-image: -ms-linear-gradient(top, #afd067, #71951f);
+    background-image: -o-linear-gradient(top, #afd067, #71951f);
+    background-image: linear-gradient(top, #afd067, #71951f);
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
+
+    -pie-background: linear-gradient(#afd067, #71951f);
+    behavior: url("javascripts/vendor/PIE.htc"); }
+  .scrollbox.fat .ui-slider-handle {
+    top: -2px;
+    right: -9px;
+
+    width: 19px; 
+    height: 19px;
+    margin-left: -9px;
+
+    background: url("../img/scrollbox/sliders.png") 0 0 no-repeat;}
+  .scrollbox.range .hitbox {
+    top: -6px; 
+
+    height: 19px;}
+  .scrollbox.range .ui-slider-handle {
+    top: -2px;
+    right: -9px;
+
+    width: 19px; 
+    height: 19px;
+    margin-left: -9px;
+
+    background: url("../img/scrollbox/sliders.png") center -30px no-repeat;}
+    .scrollbox.range .ui-slider-handle:hover, .scrollbox.range .ui-slider-handle:active {
+      background-position: center -61px;
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+  .scrollbox .scale {
+    position: relative;
+
+    box-sizing: content-box;
+    height: 3px;
+
+    border: 2px solid #212227;
+    border-radius: 10px;
+    background: #8db439;
+    background-color: #84aa31;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7ba129), color-stop(100%, #8db439));
+    background-image: -webkit-linear-gradient(top, #7ba129, #8db439);
+    background-image: -moz-linear-gradient(top, #7ba129, #8db439);
+    background-image: -ms-linear-gradient(top, #7ba129, #8db439);
+    background-image: -o-linear-gradient(top, #7ba129, #8db439);
+    background-image: linear-gradient(top, #7ba129, #8db439);
+
+    -pie-background: linear-gradient(#7ba129, #8db439); }
+  .scrollbox .ui-slider-handle {
+    position: absolute;
+    z-index: 3;
+
+    margin-top: 1px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);}
+    .scrollbox .ui-slider-handle:hover {
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5); }
+    .scrollbox .ui-slider-handle:active {
+      -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8);
+      -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8);
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8); }
+  .scrollbox .hitbox {
+    position: absolute;
+    z-index: 2; 
+
+    width: 100%;}

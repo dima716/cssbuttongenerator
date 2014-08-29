@@ -1,0 +1,23 @@
+{
+  "name": "Css3ButtonGenerator",
+  "description": "The best button generator ever.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Anikeychik Dmitry",
+    "email": "Dima716@yandex.ru"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-csscomb": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-remove-logging": "latest",
+    "grunt-ftp-push": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-imagemin": "latest"
+  }
+}
