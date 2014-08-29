@@ -1380,17 +1380,15 @@ textarea:-ms-input-placeholder {
   min-width: 125px;
   margin-right: 15px;
   text-align: right;
-  vertical-align: middle;
   text-transform: none;
 }
 .options__item__value {
-  position: absolute;
-  top: -6px;
-  right: 52px;
+  display: inline-block;
   width: 35px;
   height: 35px;
+  margin-left: 10px;
   text-align: center;
-  vertical-align: bottom;
+  vertical-align: middle;
   color: #fff;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
@@ -1405,8 +1403,10 @@ textarea:-ms-input-placeholder {
   .options__item {
     text-align: center;
   }
-  .options__item__element {
-    text-align: left;
+  .options__item__name {
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
   }
 }
 .scrollbox {
