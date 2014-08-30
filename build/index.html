@@ -29,9 +29,9 @@
       <div class="col-md-6 options">
         <h2 class="options__title">options</h2>
         <!-- options element  -->
-        <div class="options__item js-border-radius">
+        <div class="options__item">
           <h3 class="options__item__name">Border-radius</h3>
-          <div class="options__item__element">
+          <div class="options__item__element js-border-radius">
               <div class="scrollbox js-scrollbox disk">
                 <div class="hitbox"></div>
                 <div class="scale" style="width: 50%"></div>
@@ -39,9 +39,9 @@
           </div>
           <div class="options__item__value"></div>              
         </div> <!-- /options element -->
-        <div class="options__item js-border-size">
+        <div class="options__item">
           <h3 class="options__item__name">Border-size</h3>
-          <div class="options__item__element">
+          <div class="options__item__element js-border-size">
               <div class="scrollbox js-scrollbox disk">
                 <div class="hitbox"></div>
                 <div class="scale" style="width: 50%"></div>
@@ -51,8 +51,8 @@
         </div>
         <div class="options__item">
           <h3 class="options__item__name">Text</h3>
-          <div class="options__item__element">
-            <input type="text" name="button-text" placeholder="Button text">             
+          <div class="options__item__element js-button-text">
+            <input class="button-text"type="text" name="button-text">             
           </div>            
         </div>
       </div>
@@ -64,8 +64,8 @@
     <form class="code" action="#">
       <div class="row">
         <div class="col-md-12">
-          <textarea class="code__html" name="html-code" id="" cols="30" rows="10" placeholder="HTML code"></textarea>
-          <textarea class="code__css" name="css-code" id="" cols="30" rows="10" placeholder="CSS code"></textarea>
+          <textarea readonly class="code__html" name="html-code" id="" cols="45" rows="10" placeholder="HTML code"></textarea>
+          <textarea readonly class="code__css" name="css-code" id="" cols="45" rows="10" placeholder="CSS code"></textarea>
         </div>
       </div>
       <div class="row">
