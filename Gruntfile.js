@@ -55,7 +55,7 @@ grunt.initConfig({
 
     concat: {  //описываем работу плагина конкатенации
         dist: {
-            src: ['dev/js/SCF.ui.js','dev/js/scrollbox.js','dev/js/main.js'],  // какие файлы конкатенировать
+            src: ['dev/js/bootstrap.js','dev/js/main.js'],  // какие файлы конкатенировать
             dest: 'build/js/main.min.js'  // куда класть файл, который получится после процесса конкатенации 
         }
     },

@@ -7,16 +7,21 @@
         resultButton : $('.result__button'),
         codeHtmlResult: $('.code__html'),
         codeCssResult: $('.code__css'),
+        form: $('form'),
         app : this,
 
         initialize: function () {
             app.setUpSlider({element: app.borderRadiusItem,callback: app.changeBorderRadius, minValue: 0, maxValue: 50, initialValue: 0});
             app.setUpSlider({element: app.borderSizeItem, callback: app.changeBorderSize,  minValue: 1, maxValue: 50, initialValue: 0});
             app.setUpListeners();
+            app.updateCssCodeResult();
+            app.updateHtmlCodeResult();
         },
 
         setUpListeners: function() {   
             app.buttonTextItem.change(app.changeButtonText);
+            app.form.on('submit', app.submitForm);
+            app.form.on('keydown', 'input', app.removeError);
         },
 
         setUpSlider: function (options) {
@@ -70,7 +75,7 @@
         changeButtonText: function () {
             var newText = app.buttonTextItem.val();
             app.resultButton.html(newText);
-            app.updateHtmlCodeResult(newText); 
+            app.updateHtmlCodeResult(); 
         },
 
         updateCssCodeResult: function () {
@@ -88,9 +93,49 @@
         },
 
 
-        updateHtmlCodeResult: function (buttonTextValue) {
-            var html = '<div class="result__button">'+ buttonTextValue + '</div>';
-            app.codeHtmlResult.text(html);
+        updateHtmlCodeResult: function () {
+            var outerHtml = '<div class="result__button">'+ app.resultButton.html() + '</div>';
+            app.codeHtmlResult.text(outerHtml);
+        },
+
+        submitForm: function (e) {
+            e.preventDefault();
+
+            var submitButton = app.form.find('button[type="submit"]');
+
+            if( app.validateForm(app.form) === false) {return false;}
+            submitButton.attr('disabled', 'disabled');
+                
+        },
+
+        validateForm: function (form) {
+            var inputs = form.find('input'),
+                valid = true;
+
+            inputs.tooltip('destroy');
+
+            $.each(inputs, function(index, val) {
+                var input = $(val),
+                    value = input.val(),
+                    name = input.attr('name'),
+                    textError = 'Enter ' + name +', dude:)';
+
+                if(value.length === 0) {
+                    input.tooltip({
+                        trigger: 'manual',
+                        placement: 'bottom',
+                        title: textError
+                    }).tooltip('show');
+                    valid = false;
+                }
+ 
+             });
+
+            return valid;
+        },
+
+        removeError: function () {
+            $(this).tooltip('destroy');
         }
 
     };
