@@ -102,9 +102,33 @@
             e.preventDefault();
 
             var submitButton = app.form.find('button[type="submit"]');
+            var emailField = app.form.find('.email');
 
             if( app.validateForm(app.form) === false) {return false;}
             submitButton.attr('disabled', 'disabled');
+
+            var str = app.form.serialize();
+
+            $.ajax({
+                url: 'php/contact_form/contact_process.php',
+                type: 'POST',
+                data: str
+            })
+            .done(function(msg) {
+                if(msg === 'OK') {
+                    var result = '<div class="alert alert-success">Success, bro:) Check your mailbox. The code should be there.</div>';
+
+                    submitButton.parents('.row').remove();
+                    emailField.parents('.row').remove();
+                    app.form.append(result); 
+                }
+                else {
+                    emailField.after(msg);
+                }
+            })
+            .always(function() {
+                submitButton.removeAttr('disabled');
+            });
                 
         },
 
@@ -118,7 +142,7 @@
                 var input = $(val),
                     value = input.val(),
                     name = input.attr('name'),
-                    textError = 'Enter ' + name +', dude:)';
+                    textError = 'Enter ' + name +', bro:)';
 
                 if(value.length === 0) {
                     input.tooltip({
@@ -136,6 +160,12 @@
 
         removeError: function () {
             $(this).tooltip('destroy');
+
+            var alert = $('.alert-danger');
+
+            if(alert) {
+                alert.remove();
+            }
         }
 
     };

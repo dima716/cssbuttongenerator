@@ -1254,10 +1254,13 @@ hr {
   }
 }
 .alert {
+  margin: 0 auto;
   padding: 15px;
-  margin-bottom: 20px;
+  max-width: 500px;
   border: 1px solid transparent;
   border-radius: 4px;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
 }
 .alert h4 {
   margin-top: 0;
@@ -1285,9 +1288,8 @@ hr {
   color: inherit;
 }
 .alert-success {
-  background-color: #dff0d8;
   border-color: #d6e9c6;
-  color: #3c763d;
+  background-color: #279B61;
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
@@ -1296,9 +1298,8 @@ hr {
   color: #2b542c;
 }
 .alert-info {
-  background-color: #d9edf7;
   border-color: #bce8f1;
-  color: #31708f;
+  background-color: #d9edf7;
 }
 .alert-info hr {
   border-top-color: #a6e1ec;
@@ -1307,9 +1308,8 @@ hr {
   color: #245269;
 }
 .alert-warning {
-  background-color: #fcf8e3;
   border-color: #faebcc;
-  color: #8a6d3b;
+  background-color: #fcf8e3;
 }
 .alert-warning hr {
   border-top-color: #f7e1b5;
@@ -1318,9 +1318,9 @@ hr {
   color: #66512c;
 }
 .alert-danger {
-  background-color: #f2dede;
+  margin-top: 20px;
   border-color: #ebccd1;
-  color: #a94442;
+  background-color: #993333;
 }
 .alert-danger hr {
   border-top-color: #e4b9c0;
@@ -1350,20 +1350,20 @@ hr {
 }
 .tooltip-inner {
   max-width: 150px;
+  margin: 0 auto;
   padding: 3px 8px;
-  color: #ffffff;
   text-align: center;
   text-decoration: none;
-  background-color: #CC3333;
+  color: #ffffff;
   border-radius: 4px;
-  margin: 0 auto;
+  background-color: #CC3333;
 }
 .tooltip-arrow {
   position: absolute;
   width: 0;
   height: 0;
-  border-color: transparent;
   border-style: solid;
+  border-color: transparent;
 }
 .tooltip.top .tooltip-arrow {
   bottom: 0;
@@ -1379,8 +1379,8 @@ hr {
   border-top-color: #CC3333;
 }
 .tooltip.top-right .tooltip-arrow {
-  bottom: 0;
   right: 5px;
+  bottom: 0;
   border-width: 5px 5px 0;
   border-top-color: #CC3333;
 }
@@ -1746,6 +1746,7 @@ textarea {
 }
 .submit {
   transition: all .25s ease;
+  padding: 5px 60px;
   border: 2px solid #fff;
   border-radius: 5px;
   box-shadow: 1px 1px 5px 0 #000;
