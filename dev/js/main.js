@@ -79,8 +79,8 @@
         },
 
         updateCssCodeResult: function () {
-            var borderRadius = app.resultButton.css('border-radius'),
-                border = app.resultButton.css('border-width');
+            var borderRadius = app.resultButton.css('border-top-left-radius'),
+                border = app.resultButton.css('border-left-width');
 
             app.codeCssResult.text(
                 '.result__button {' + '\n' +

@@ -18,6 +18,7 @@
                     ."CSS code:"."\r\n"
                     .$codecss;
           
+
         if (!ValidateEmail($email)){
             $error = 'You entered incorrect email, bro! Try another one, my man!';
         }
