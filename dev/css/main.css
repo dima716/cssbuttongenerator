@@ -189,7 +189,8 @@ figure {
  */
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 /**
@@ -295,7 +296,9 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -400,14 +403,18 @@ th {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
 }
 body {
   color: #333333;
@@ -451,7 +458,8 @@ img {
   height: auto;
 }
 .img-rounded {
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
 }
 .img-thumbnail {
   display: inline-block;
@@ -460,15 +468,16 @@ img {
   height: auto;
   padding: 4px;
   -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   background-color: #ffffff;
   line-height: 1.42857143;
 }
 .img-circle {
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 hr {
   margin-top: 20px;
@@ -1254,12 +1263,13 @@ hr {
   }
 }
 .alert {
+  max-width: 500px;
   margin: 0 auto;
   padding: 15px;
-  max-width: 500px;
-  border: 1px solid transparent;
-  border-radius: 4px;
   color: #fff;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   text-shadow: 1px 1px 2px #000;
 }
 .alert h4 {
@@ -1355,7 +1365,8 @@ hr {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   background-color: #CC3333;
 }
 .tooltip-arrow {
@@ -1472,7 +1483,8 @@ hr {
 }
 body {
   background: url(../img/bg.jpg) no-repeat;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   font-family: 'Quicksand';
 }
 .row {
@@ -1503,7 +1515,8 @@ button {
 input,
 textarea {
   padding: 10px;
-  box-shadow: 0 0 10px 0 #000;
+  -webkit-box-shadow: 0 0 10px 0 #000;
+          box-shadow: 0 0 10px 0 #000;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
@@ -1557,9 +1570,11 @@ textarea {
   text-align: center;
   vertical-align: middle;
   color: #fff;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px 0 #000;
+  -webkit-box-shadow: 0 0 10px 0 #000;
+          box-shadow: 0 0 10px 0 #000;
   text-shadow: 1px 1px 2px #000;
   line-height: 35px;
 }
@@ -1586,10 +1601,10 @@ textarea {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   background-color: #1e1f22;
   -webkit-box-shadow: inset 0 1px 0 #000000, 0 1px 0 rgba(255, 255, 255, 0.1);
-  -moz-box-shadow: inset 0 1px 0 #000000, 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 #000000, 0 1px 0 rgba(255, 255, 255, 0.1);
   behavior: url("javascripts/vendor/PIE.htc");
 }
@@ -1606,9 +1621,7 @@ textarea {
   background: #9f9f9f;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #9f9f9f));
   background-image: -webkit-linear-gradient(top, #f7f7f7, #9f9f9f);
-  background-image: -moz-linear-gradient(top, #f7f7f7, #9f9f9f);
-  background-image: -ms-linear-gradient(top, #f7f7f7, #9f9f9f);
-  background-image: -o-linear-gradient(top, #f7f7f7, #9f9f9f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#9f9f9f));
   background-image: linear-gradient(top, #f7f7f7, #9f9f9f);
   -pie-background: linear-gradient(#f7f7f7, #9f9f9f);
   behavior: url("javascripts/vendor/PIE.htc");
@@ -1636,12 +1649,9 @@ textarea {
   background: #71951f;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #afd067), color-stop(100%, #71951f));
   background-image: -webkit-linear-gradient(top, #afd067, #71951f);
-  background-image: -moz-linear-gradient(top, #afd067, #71951f);
-  background-image: -ms-linear-gradient(top, #afd067, #71951f);
-  background-image: -o-linear-gradient(top, #afd067, #71951f);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#afd067), to(#71951f));
   background-image: linear-gradient(top, #afd067, #71951f);
   -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -moz-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4);
   -pie-background: linear-gradient(#afd067, #71951f);
   behavior: url("javascripts/vendor/PIE.htc");
@@ -1670,22 +1680,22 @@ textarea {
 .scrollbox.range .ui-slider-handle:active {
   background-position: center -61px;
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .scrollbox .scale {
   position: relative;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   height: 3px;
   border: 2px solid #212227;
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
   background: #8db439;
   background-color: #84aa31;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7ba129), color-stop(100%, #8db439));
   background-image: -webkit-linear-gradient(top, #7ba129, #8db439);
-  background-image: -moz-linear-gradient(top, #7ba129, #8db439);
-  background-image: -ms-linear-gradient(top, #7ba129, #8db439);
-  background-image: -o-linear-gradient(top, #7ba129, #8db439);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7ba129), to(#8db439));
   background-image: linear-gradient(top, #7ba129, #8db439);
   -pie-background: linear-gradient(#7ba129, #8db439);
 }
@@ -1698,19 +1708,17 @@ textarea {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .scrollbox .ui-slider-handle:hover {
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.5);
 }
 .scrollbox .ui-slider-handle:active {
   -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), inset 0 0 7px rgba(0, 0, 0, 0.8);
 }
 .scrollbox .hitbox {
@@ -1745,20 +1753,27 @@ textarea {
   }
 }
 .submit {
-  transition: all .25s ease;
   padding: 5px 60px;
+  -webkit-transition: all .25s ease;
+          transition: all .25s ease;
   border: 2px solid #fff;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px 0 #000;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px 0 #000;
+          box-shadow: 1px 1px 5px 0 #000;
 }
 .submit:active {
-  box-shadow: -1px -1px 5px 0 #000000;
+  -webkit-box-shadow: -1px -1px 5px 0 #000000;
+          box-shadow: -1px -1px 5px 0 #000000;
 }
 .submit[disabled='disabled'] {
-  box-shadow: -1px -1px 5px 0 #000000;
+  -webkit-box-shadow: -1px -1px 5px 0 #000000;
+          box-shadow: -1px -1px 5px 0 #000000;
 }
 .result__button {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   width: 140px;
   height: 40px;
   margin: 50px auto;
@@ -1766,7 +1781,8 @@ textarea {
   text-align: center;
   color: #fff;
   border: 1px solid #fff;
-  border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   background: rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 2px #000;
   line-height: 40px;

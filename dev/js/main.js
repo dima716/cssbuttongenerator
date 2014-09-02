@@ -103,6 +103,11 @@
 
             var submitButton = app.form.find('button[type="submit"]');
             var emailField = app.form.find('.email');
+            var alert = $('.alert-danger');
+
+            if(alert) {
+                alert.remove();
+            }
 
             if( app.validateForm(app.form) === false) {return false;}
             submitButton.attr('disabled', 'disabled');
