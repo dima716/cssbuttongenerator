@@ -23,9 +23,12 @@
 <![endif]-->
 
 <div class="wrapper">
+
   <div class="container">
     <h1 class="title">css3 button generator</h1>
+    <!-- options items and result button -->
     <div class="row">
+      <!-- options -->
       <div class="col-md-6 options">
         <h2 class="options__title">options</h2>
         <!-- options element  -->
@@ -39,28 +42,35 @@
           </div>
           <div class="options__item__value"></div>              
         </div> <!-- /options element -->
+
         <div class="options__item">
           <h3 class="options__item__name">Border-size</h3>
           <div class="options__item__element js-border-size">
-              <div class="scrollbox js-scrollbox disk">
-                <div class="hitbox"></div>
-                <div class="scale" style="width: 50%"></div>
-              </div>             
+            <div class="scrollbox js-scrollbox disk">
+              <div class="hitbox"></div>
+              <div class="scale" style="width: 50%"></div>
+            </div>             
           </div>
           <div class="options__item__value"></div>               
         </div>
+        
         <div class="options__item">
           <h3 class="options__item__name">Text</h3>
           <div class="options__item__element js-button-text">
             <input class="button-text" type="text" name="button-text">             
           </div>            
         </div>
-      </div>
+      </div><!-- /options -->
+
+      <!-- result -->
       <div class="col-md-6 result">
         <h2>result</h2>
         <div class="result__button"></div>
-      </div>
+      </div> <!-- /result -->
     </div>
+    <!-- /options items and result button -->
+
+    <!-- html and css code panels -->
     <form class="code" action="#">
       <div class="row">
         <div class="col-md-12">
@@ -78,10 +88,9 @@
           <button class="submit" type="submit" name="submit">Submit</button>
         </div>
       </div>
-    </form>
-  </div> <!-- /container -->
-</div> <!-- /wrapper -->
-
+    </form><!-- /html and css code panels -->
+  </div>
+</div> 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 <!--[if IE]>
