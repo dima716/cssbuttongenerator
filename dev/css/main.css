@@ -1730,12 +1730,10 @@ textarea {
 }
 .code {
   text-align: center;
+  margin-bottom: 20px;
 }
 .code__html {
   margin-right: 20px;
-}
-.code .col-md-12 {
-  min-height: 87px;
 }
 @media (max-width: 992px) {
   .code__html {
