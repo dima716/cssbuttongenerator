@@ -18,8 +18,8 @@
             app.updateHtmlCodeResult();
         },
 
-        setUpListeners: function() {   
-            app.buttonTextItem.change(app.changeButtonText);
+        setUpListeners: function() {
+            app.buttonTextItem.on('keyup', app.changeButtonText);
             app.form.on('submit', app.submitForm);
             app.form.on('keydown', 'input', app.removeError);
         },
@@ -75,7 +75,7 @@
         changeButtonText: function () {
             var newText = app.buttonTextItem.val();
             app.resultButton.html(newText);
-            app.updateHtmlCodeResult(); 
+            app.updateHtmlCodeResult();
         },
 
         updateCssCodeResult: function () {
@@ -125,7 +125,7 @@
 
                     submitButton.parents('.row').remove();
                     emailField.parents('.row').remove();
-                    app.form.append(result); 
+                    app.form.append(result);
                 }
                 else {
                     emailField.after(msg);
@@ -134,7 +134,7 @@
             .always(function() {
                 submitButton.removeAttr('disabled');
             });
-                
+
         },
 
         validateForm: function (form) {
@@ -157,7 +157,7 @@
                     }).tooltip('show');
                     valid = false;
                 }
- 
+
              });
 
             return valid;
